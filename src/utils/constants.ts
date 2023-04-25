@@ -74,7 +74,8 @@ export const NetworkIDToHRP: object = {
   4: "everest",
   5: "fuji",
   1337: "custom",
-  12345: "local"
+  12345: "local",
+  66227: "cher"
 }
 
 export const HRPToNetworkID: object = {
@@ -437,6 +438,17 @@ n12345C.avaxAssetID = avaxAssetID
 n12345C.chainID = 43112
 // End local network
 
+avaxAssetID = "BrmCVRwhkLK2mwU4kMPRsnjutcygqiA3PoU4jJ32ztj6AADMh"
+const n66227X: X = { ...n5X }
+n66227X.blockchainID = "tAqsDsfs3cmi2h7evuKkPDEsRqQGVCRaD9ske9QNEfdbezSwy"
+n66227X.avaxAssetID = avaxAssetID
+const n66227P: P = { ...n5P }
+n66227P.blockchainID = PlatformChainID
+const n66227C: C = { ...n5C }
+n66227C.blockchainID = "YF95H1bKSC22W8c3UuNwRMPfUX2FvK1fYW1uEZPUV7bwcW63U"
+n66227C.avaxAssetID = avaxAssetID
+n66227C.chainID = 56612
+
 export class Defaults {
   static network: Networks = {
     0: {
@@ -510,6 +522,15 @@ export class Defaults {
       "11111111111111111111111111111111LpoYY": n12345P,
       C: n12345C,
       "2CA6j5zYzasynPsFeNoqWkmTCt3VScMvXUZHbfDJ8k3oGzAPtU": n12345C
+    },
+    66227: {
+      hrp: NetworkIDToHRP[66227],
+      X: n66227X,
+      tAqsDsfs3cmi2h7evuKkPDEsRqQGVCRaD9ske9QNEfdbezSwy: n66227X,
+      P: n66227P,
+      "11111111111111111111111111111111LpoYY": n66227P,
+      C: n66227C,
+      YF95H1bKSC22W8c3UuNwRMPfUX2FvK1fYW1uEZPUV7bwcW63U: n66227C
     }
   }
 }
